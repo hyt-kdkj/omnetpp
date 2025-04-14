@@ -60,5 +60,8 @@ RUN wget https://github.com/omnetpp/omnetpp/releases/download/omnetpp-6.0.3/omne
     echo "WITH_OSG=no" >> /workspace/omnetpp-6.0.3/configure.user && \
     rm omnetpp-6.0.3-linux-x86_64.tgz
 
+# OMNeT++ をビルド
+RUN bash -c "cd /workspace/omnetpp-6.0.3 && source /workspace/venv/bin/activate && source /workspace/omnetpp-6.0.3/setenv && ./configure && make"
+
 # 起動時に仮想環境を有効化した状態でシェルを開く
-CMD ["/bin/bash"]
+CMD ["/bin/bash", "-c", "source /workspace/venv/bin/activate && exec /bin/bash"]

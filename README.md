@@ -1,13 +1,9 @@
+正しく動作するかを確認
 
 ```
-source venv/bin/activate
+cd omnetpp-6.0.3/samples/tictoc
 
-cd omnetpp-6.0.3
-
-. setenv
-
-./configure
-
-make
-
+./tictoc --network=Tictoc
 ```
+
+これを実行して、
