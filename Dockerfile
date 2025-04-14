@@ -32,6 +32,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     git \
     nano \
+    vi \
     cmake \
     openmpi-bin \
  && rm -rf /var/lib/apt/lists/* # aptのキャッシュを削除
