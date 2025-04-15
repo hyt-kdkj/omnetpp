@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # 必要なパッケージをインストール
 # 必要なパッケージをインストール（キャッシュを無効化）
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y \
     build-essential \
     clang \
     gdb \
@@ -32,7 +32,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     git \
     nano \
-    vi \
+    vim \
     cmake \
     openmpi-bin \
  && rm -rf /var/lib/apt/lists/* # aptのキャッシュを削除
